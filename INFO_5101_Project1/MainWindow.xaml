@@ -5,11 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:INFO_5101_Project1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="jsonButton" Content="JSON" HorizontalAlignment="Left" Margin="152,161,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="xmlButton" Content="XML" HorizontalAlignment="Left" Margin="360,161,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="CSVButton" Content="CSV" HorizontalAlignment="Left" Margin="565,161,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True" RenderTransformOrigin="0.5,0.5">
+    <Border 
+            CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/mainBackground.png"/>
+        </Border.Background>
+        <Grid x:Name="AppGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Border Background="#FF1E1D2B" CornerRadius="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="12.5"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="1" Background="#FF1E1D2B"/>
+                </Grid>
+            </Border>
+
+            <Button Grid.Row="0" Name="Exit" Style="{StaticResource menuButtons}"
+                    Height="20"
+                    Width="20"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,15,0"  Background="#FFDB3131">
+                <Button.Content>
+                    <TextBlock Text="x" FontSize="10.8" TextAlignment="Center" Width="18" Height="18"/>
+                </Button.Content>
+            </Button>
+
+            <Button Grid.Row="0" Name="Hide" Style="{StaticResource menuButtons}"
+                    Height="20"
+                    Width="20"
+                    HorizontalAlignment="Right"
+
+                    Margin="0,0,35,0" Background="#FFC6A523">
+                <Button.Content>
+                    <TextBlock Text="_" FontSize="12" TextAlignment="Center" Width="18" Height="16" Margin="0,-5,0,0"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Border>
 </Window>
