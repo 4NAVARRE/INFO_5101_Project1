@@ -1,0 +1,28 @@
+﻿<Window x:Class="INFO_5101_Project1.Province"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:INFO_5101_Project1"
+        mc:Ignorable="d"
+        Title="Province" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/background3.jpg"/>
+        </Grid.Background>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="120,114,0,0" VerticalAlignment="Top" Width="116" FontSize="22" FontWeight="Bold" Background="#FF380404" Foreground="#FFF9F6F6"/>
+        <ComboBox HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37">
+            <ComboBoxItem>Province</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Province 2</ComboBoxItem>
+            <ComboBoxItem>Province 3</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Cities in the Province" HorizontalAlignment="Left" Margin="444,116,0,0" VerticalAlignment="Top" Width="212" Height="35" FontSize="18" FontWeight="Bold" Background="#FF4C0202" Foreground="#FFFBF8F8"/>
+        <TextBox HorizontalAlignment="Left" Margin="444,156,0,0" TextWrapping="Wrap" Text="MultiLine" VerticalAlignment="Top" Width="266" Height="194" Background="#FFEFD7D7" />
+        <Image HorizontalAlignment="Left" Height="147" Margin="120,203,0,0" VerticalAlignment="Top" Width="259" Source="/map2.png" Stretch="Fill" >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/map2.png"/>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Window>

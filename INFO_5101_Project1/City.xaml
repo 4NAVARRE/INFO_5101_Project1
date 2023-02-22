@@ -1,0 +1,47 @@
+﻿<Window x:Class="INFO_5101_Project1.City"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:INFO_5101_Project1"
+        mc:Ignorable="d"
+        Title="City" Height="450" Width="800">
+    <Border>
+        <!--<Border.Background>
+            <ImageBrush ImageSource="/background1.png" />
+        </Border.Background>-->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/background1.png"/>
+            </Grid.Background>
+            <Label Content="City 1:" HorizontalAlignment="Left" Margin="93,136,0,0" VerticalAlignment="Top" Width="77" FontSize="18" FontWeight="Bold" Foreground="#FF061275"/>
+            <TextBox HorizontalAlignment="Left" Margin="400,170,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+            <Label Content="City" HorizontalAlignment="Left" Margin="400,136,0,0" VerticalAlignment="Top" Width="80" Foreground="#FF05165D" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.538,0.738"/>
+            <ComboBox HorizontalAlignment="Left" Margin="93,170,0,0" VerticalAlignment="Top" Width="219" Height="33">
+                <ComboBoxItem>City</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">City 2</ComboBoxItem>
+                <ComboBoxItem>City 3</ComboBoxItem>
+            </ComboBox>
+            <Label Content="City 2:" HorizontalAlignment="Left" Margin="93,217,0,0" VerticalAlignment="Top" Width="69" FontSize="18" FontWeight="Bold" Foreground="#FF041369"/>
+            <Label Content="Pupulation" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,217,0,0" Width="102" FontSize="18" FontWeight="Bold" Foreground="#FF0C1B6D"/>
+            <TextBox HorizontalAlignment="Left" Margin="400,251,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="205" Height="33"/>
+            <ComboBox HorizontalAlignment="Left" Margin="93,251,0,0" VerticalAlignment="Top" Width="219" Height="33">
+                <ComboBoxItem>City</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">City 2</ComboBoxItem>
+                <ComboBoxItem>City 3</ComboBoxItem>
+            </ComboBox>
+            <Button Content="Begin Match" HorizontalAlignment="Left" Margin="93,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="49" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="114" Margin="618,170,0,0" VerticalAlignment="Top" Width="100" Source="/city.png" Stretch="Fill">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="/city.png"/>
+                </Image.OpacityMask>
+            </Image>
+        </Grid>
+    </Border>
+</Window>
