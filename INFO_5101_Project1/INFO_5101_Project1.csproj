@@ -8,23 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="background1.png" />
-    <None Remove="background2.png" />
-    <None Remove="background3.jpg" />
-    <None Remove="city.png" />
-    <None Remove="city_button.png" />
-    <None Remove="city_distance_button.png" />
     <None Remove="city_match_button.png" />
-    <None Remove="csv.png" />
-    <None Remove="json.png" />
-    <None Remove="mainBackground.png" />
-    <None Remove="map1.jpg" />
-    <None Remove="map2.png" />
-    <None Remove="province_button.png" />
-    <None Remove="province_population_button.png" />
-    <None Remove="statistic.jpg" />
-    <None Remove="tower.jpg" />
-    <None Remove="xml.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,23 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="background1.png" />
-    <Resource Include="background2.png" />
-    <Resource Include="background3.jpg" />
-    <Resource Include="city.png" />
-    <Resource Include="city_button.png" />
-    <Resource Include="city_distance_button.png" />
-    <Resource Include="city_match_button.png" />
-    <Resource Include="csv.png" />
-    <Resource Include="json.png" />
-    <Resource Include="mainBackground.png" />
-    <Resource Include="map1.jpg" />
-    <Resource Include="map2.png" />
-    <Resource Include="province_button.png" />
-    <Resource Include="province_population_button.png" />
-    <Resource Include="statistic.jpg" />
-    <Resource Include="tower.jpg" />
-    <Resource Include="xml.png" />
+    <Resource Include="res\city_match_button.png" />
   </ItemGroup>
 
 </Project>

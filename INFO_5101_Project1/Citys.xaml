@@ -1,4 +1,4 @@
-﻿<Window x:Class="INFO_5101_Project1.City"
+﻿<Window x:Class="INFO_5101_Project1.Citys"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,7 +12,7 @@
         </Border.Background>-->
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/background1.png"/>
+                <ImageBrush ImageSource="res/background1.png"/>
             </Grid.Background>
             <Label Content="City 1:" HorizontalAlignment="Left" Margin="93,136,0,0" VerticalAlignment="Top" Width="77" FontSize="18" FontWeight="Bold" Foreground="#FF061275"/>
             <TextBox HorizontalAlignment="Left" Margin="400,170,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847"/>
@@ -37,9 +37,9 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Image HorizontalAlignment="Left" Height="114" Margin="618,170,0,0" VerticalAlignment="Top" Width="100" Source="/city.png" Stretch="Fill">
+            <Image HorizontalAlignment="Left" Height="114" Margin="618,170,0,0" VerticalAlignment="Top" Width="100" Source="res/city.png" Stretch="Fill">
                 <Image.OpacityMask>
-                    <ImageBrush ImageSource="/city.png"/>
+                    <ImageBrush ImageSource="res/city.png"/>
                 </Image.OpacityMask>
             </Image>
         </Grid>

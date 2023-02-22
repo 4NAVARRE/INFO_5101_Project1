@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace INFO_5101_Project1
 {
     /// <summary>
-    /// Interaction logic for City.xaml
+    /// Interaction logic for Citys.xaml
     /// </summary>
-    public partial class City : Window
+    public partial class Citys : Window
     {
-        public City()
+        public Citys()
         {
             InitializeComponent();
         }

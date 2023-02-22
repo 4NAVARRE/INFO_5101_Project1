@@ -8,7 +8,7 @@
         Title="Province" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/background3.jpg"/>
+            <ImageBrush ImageSource="res/background3.jpg"/>
         </Grid.Background>
         <Label Content="Province" HorizontalAlignment="Left" Margin="120,114,0,0" VerticalAlignment="Top" Width="116" FontSize="22" FontWeight="Bold" Background="#FF380404" Foreground="#FFF9F6F6"/>
         <ComboBox HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37">
@@ -18,9 +18,9 @@
         </ComboBox>
         <Label Content="Cities in the Province" HorizontalAlignment="Left" Margin="444,116,0,0" VerticalAlignment="Top" Width="212" Height="35" FontSize="18" FontWeight="Bold" Background="#FF4C0202" Foreground="#FFFBF8F8"/>
         <TextBox HorizontalAlignment="Left" Margin="444,156,0,0" TextWrapping="Wrap" Text="MultiLine" VerticalAlignment="Top" Width="266" Height="194" Background="#FFEFD7D7" />
-        <Image HorizontalAlignment="Left" Height="147" Margin="120,203,0,0" VerticalAlignment="Top" Width="259" Source="/map2.png" Stretch="Fill" >
+        <Image HorizontalAlignment="Left" Height="147" Margin="120,203,0,0" VerticalAlignment="Top" Width="259" Source="res/map2.png" Stretch="Fill" >
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/map2.png"/>
+                <ImageBrush ImageSource="res/map2.png"/>
             </Image.OpacityMask>
         </Image>
 
