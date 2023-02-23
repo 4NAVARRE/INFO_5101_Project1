@@ -32,7 +32,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Row="1" Background="#FF1E1D2B"/>
+                    <TextBlock Grid.Row="1" Background="#FF1E1D2B" Margin="0,0,0,-17"/>
                 </Grid>
             </Border>
 
@@ -40,9 +40,9 @@
                     Height="20"
                     Width="20"
                     HorizontalAlignment="Left"
-                    Margin="413,2,0,3"  Background="#FFDB3131" Grid.Column="1" Click="Exit_Click" MouseMove="Exit_MouseMove">
+                    Margin="411,16,0,414"  Background="#FFDB3131" Grid.Column="1" Click="Exit_Click" MouseMove="Exit_MouseMove" Grid.RowSpan="2">
                 <Button.Content>
-                    <TextBlock Text="x" FontSize="10.8" TextAlignment="Center" Width="18" Height="18"/>
+                    <TextBlock Text="x" FontSize="10.8" TextAlignment="Center" Width="20" Height="20"  Margin="0,0,0,0"/>
                 </Button.Content>
             </Button>
 
@@ -51,7 +51,7 @@
                     Width="20"
                     HorizontalAlignment="Left"
 
-                    Margin="393,2,0,3" Background="#FFC6A523" Grid.Column="1" Click="Hide_Click" MouseMove="Hide_MouseMove">
+                    Margin="379,16,0,414" Background="#FFC6A523" Grid.Column="1" Click="Hide_Click" MouseMove="Hide_MouseMove" Grid.RowSpan="2">
                 <Button.Content>
                     <TextBlock Text="_" FontSize="12" TextAlignment="Center" Width="18" Height="16" Margin="0,-5,0,0"/>
                 </Button.Content>

@@ -176,3 +176,5 @@ C:\Users\agnif\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\o
 C:\Users\agnif\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\obj\Debug\net6.0-windows\ref\INFO_5101_Project1.dll
 C:\Users\kierk\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\obj\Debug\net6.0-windows\Small_Large_City.g.cs
 C:\Users\kierk\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\obj\Debug\net6.0-windows\Small_Large_City.baml
+C:\Users\agnif\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\obj\Debug\net6.0-windows\Small_Large_City.g.cs
+C:\Users\agnif\OneDrive\Documents\GitHub\INFO_5101_Project1\INFO_5101_Project1\obj\Debug\net6.0-windows\Small_Large_City.baml

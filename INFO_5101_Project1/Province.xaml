@@ -10,8 +10,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/background3.jpg"/>
         </Grid.Background>
-        <Label Content="Province" HorizontalAlignment="Left" Margin="120,114,0,0" VerticalAlignment="Top" Width="116" FontSize="22" FontWeight="Bold" Background="#FF380404" Foreground="#FFF9F6F6"/>
-        <Button x:Name="Submit_Button" Padding="10" Content="Submit" HorizontalAlignment="Left" Margin="257,117,0,0" VerticalAlignment="Top" Width="100" Height="40" RenderTransformOrigin="0.508,2.444" FontWeight="Bold" FontSize="12" BorderThickness="3,3,3,3" Click="Submit_Click">
+        <Label Content="Province" HorizontalAlignment="Left" Margin="120,48,0,0" VerticalAlignment="Top" Width="116" FontSize="22" FontWeight="Bold" Background="#FF380404" Foreground="#FFF9F6F6"/>
+        <Button x:Name="Submit_Button" Padding="10" Content="Submit" HorizontalAlignment="Left" Margin="126,145,0,0" VerticalAlignment="Top" Width="100" Height="40" RenderTransformOrigin="0.508,2.444" FontWeight="Bold" FontSize="12" BorderThickness="3,3,3,3" Click="Submit_Click" Foreground="#FFFDFBFB" BorderBrush="#FFFBF8F8" Background="#FF051D67" >
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -26,7 +26,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37" Loaded="ComboBoxProvinces_Loaded">
+        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="120,92,0,0" VerticalAlignment="Top" Width="262" Height="37" Loaded="ComboBoxProvinces_Loaded">
             <ComboBoxItem IsSelected="True">Select A Province</ComboBoxItem>
             <!--<ComboBoxItem>Alberta</ComboBoxItem>
             <ComboBoxItem>British Columbia</ComboBoxItem>

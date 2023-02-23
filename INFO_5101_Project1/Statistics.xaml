@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/background3.jpg"/>
         </Grid.Background>
-        <Button Content="" HorizontalAlignment="Left" Margin="110,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.842,-1.2" Width="130" Height="114" Click="Button_Click">
+        <Button Content="" HorizontalAlignment="Left" Margin="62,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.842,-1.2" Width="130" Height="114" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -20,7 +20,7 @@
                 <ImageBrush ImageSource="/city_button.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="ProvCityButton" Content="" HorizontalAlignment="Left" Margin="307,87,0,0" VerticalAlignment="Top" Width="130" Height="113" Click="ProvCityClick">
+        <Button x:Name="ProvCityButton" Content="" HorizontalAlignment="Left" Margin="242,87,0,0" VerticalAlignment="Top" Width="130" Height="113" Click="ProvCityClick">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -30,7 +30,7 @@
                 <ImageBrush ImageSource="/province_button.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="307,260,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785" Click="Button_Click_1">
+        <Button Content="" HorizontalAlignment="Left" Margin="320,265,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -40,14 +40,17 @@
                 <ImageBrush ImageSource="/province_population_button.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Prov Rank" HorizontalAlignment="Left" Margin="110,265,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785" FontSize="25" Click="ProvCityList_Click">
+        <Button Content="Prov Rank" HorizontalAlignment="Left" Margin="110,265,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785" FontSize="23" Click="ProvCityList_Click" Foreground="#FF4E0606" FontWeight="Bold" BorderBrush="#FF707070">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/statistic.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="504,87,0,0" VerticalAlignment="Top" Width="130" Height="113" Click="Button_Click_2">
+        <Button Content="" HorizontalAlignment="Left" Margin="430,86,0,0" VerticalAlignment="Top" Width="130" Height="113" Click="Button_Click_2">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -57,7 +60,7 @@
                 <ImageBrush ImageSource="/city_match_button.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="504,265,0,0" VerticalAlignment="Top" Width="130" Height="113">
+        <Button Content="" HorizontalAlignment="Left" Margin="608,87,0,0" VerticalAlignment="Top" Width="130" Height="113">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -65,6 +68,19 @@
             </Button.Resources>
             <Button.Background>
                 <ImageBrush ImageSource="/city_distance_button.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="City Size" HorizontalAlignment="Left" Margin="520,265,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785" FontSize="23" Click="ProvCityList_Click" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Foreground>
+                <SolidColorBrush Color="#FF580606" Opacity="1"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/city.png" Stretch="Fill" Opacity="1"/>
             </Button.Background>
         </Button>
 
