@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,6 +111,24 @@ namespace INFO_5101_Project1.BackEnd
             {
                 ArgumentNullException argumentNullException = new($"Error city1 or city2 has a null population");
                 throw argumentNullException;
+            }
+        }
+
+        public static void ShowCityOnMap(string cityName)
+        {
+            cityName = CheckSame(cityName);
+            if (cityName == null)
+                return;
+            
+            CityCatalogue.TryGetValue(cityName, out var tmp);
+            try
+            {
+                string url = $"https://www.google.com/maps/place/{tmp.latitude},{tmp.longitude}";
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            }
+            catch
+            {
+
             }
         }
         public static int DisplayProvincePopulation(string province)

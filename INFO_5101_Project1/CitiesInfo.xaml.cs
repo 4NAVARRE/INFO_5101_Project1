@@ -39,5 +39,10 @@ namespace INFO_5101_Project1
                 CitiesInfoPopulationField.Text = selectedCity?.population.ToString();
             }
         }
+
+        private void CitiesInfoLocateButton_Click(object sender, RoutedEventArgs e)
+        {
+            BackEnd.Statistics.ShowCityOnMap(cityInputTextBox.Text);
+        }
     }
 }
