@@ -30,9 +30,10 @@ namespace INFO_5101_Project1.BackEnd
                 double longitude = double.Parse(cityNode.SelectSingleNode("lng").InnerText);
                 string country = cityNode.SelectSingleNode("country").InnerText;
                 string province = cityNode.SelectSingleNode("admin_name").InnerText;
+                string capital = cityNode.SelectSingleNode("capital").InnerText;
                 int population = int.Parse(cityNode.SelectSingleNode("population").InnerText);
                 int cityID = int.Parse(cityNode.SelectSingleNode("id").InnerText);
-                CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, latitude, longitude, country);
+                CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, capital, latitude, longitude, country);
                 try
                 {
                     data.Add(cityName, cityInfo);
@@ -73,10 +74,11 @@ namespace INFO_5101_Project1.BackEnd
                     double longitude = (double)cityObject["lng"];
                     string country = (string)cityObject["country"];
                     string province = (string)cityObject["admin_name"];
+                    string capital = (string)cityObject["capital"];
                     int population = (int)cityObject["population"];
                     int cityID = (int)cityObject["id"];
 
-                    CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, latitude, longitude, country);
+                    CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, capital, latitude, longitude, country);
                     try
                     {
                         data.Add(cityName, cityInfo);
@@ -119,10 +121,11 @@ namespace INFO_5101_Project1.BackEnd
                 double longitude = double.Parse(values[3]);
                 string country = values[4];
                 string province = values[5];
+                string capital = values[6];
                 int population = int.Parse(values[7]);
                 int cityID = int.Parse(values[8]);
 
-                CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, latitude, longitude, country);
+                CityInfo cityInfo = new(cityID, cityName, cityAscii, population, province, capital, latitude, longitude, country);
                 try
                 {
                     data.Add(cityName, cityInfo);

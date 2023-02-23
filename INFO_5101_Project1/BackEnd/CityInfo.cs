@@ -8,6 +8,7 @@ namespace INFO_5101_Project1.BackEnd
 {
     public class CityInfo
     {
+        public string capital { get; }
         public long cityId { get; }
         public string cityName { get; }
         public string cityAscii { get; }
@@ -17,7 +18,7 @@ namespace INFO_5101_Project1.BackEnd
         public double longitude { get; }
         public string country { get; }
 
-        public CityInfo(long cityId, string cityName, string cityAscii, int population, string province, double latitude, double longitude, string country)
+        public CityInfo(long cityId, string cityName, string cityAscii, int population, string province, string capital, double latitude, double longitude, string country)
         {
             this.cityId = cityId;
             this.cityName = cityName;
@@ -27,19 +28,8 @@ namespace INFO_5101_Project1.BackEnd
             this.latitude = latitude;
             this.longitude = longitude;
             this.country = country;
-        }
-
-        /*public CityInfo()
-        {
-            cityId = 0;
-            cityName = "";
-            cityAscii = "";
-            population = 0;
-            province = "";
-            latitude = 0;
-            longitude = 0;
-            country = "";
-        }*/
+            this.capital = capital;
+        } 
 
         public string GetProvince()
         {
