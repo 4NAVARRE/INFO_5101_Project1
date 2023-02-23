@@ -23,5 +23,25 @@ namespace INFO_5101_Project1
         {
             InitializeComponent();
         }
+
+        private void cityList_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] cities=BackEnd.Statistics.RankProvincesByCities();
+            cityList.Clear();
+            foreach (var city in cities)
+            {
+                cityList.Text += city +"\n";
+            }
+        }
+
+        private void popList_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] pop = BackEnd.Statistics.RankProvincesByPopulation();
+            popList.Clear();
+            foreach (var city in pop)
+            {
+                popList.Text += city + "\n";
+            }
+        }
     }
 }

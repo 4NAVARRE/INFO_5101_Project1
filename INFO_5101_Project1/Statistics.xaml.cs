@@ -28,5 +28,10 @@ namespace INFO_5101_Project1
             Province provPage = new();
             provPage.Show();
         }
+        private void ProvCityList_Click(object sender, RoutedEventArgs e)
+        {
+            Display_Province_Rank pr = new();
+            pr.Show();
+        }
     }
 }

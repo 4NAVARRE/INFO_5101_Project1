@@ -12,9 +12,8 @@
         </Grid.Background>
         <Label Content="Province" HorizontalAlignment="Left" Margin="108,39,0,0" VerticalAlignment="Top" Width="106" FontSize="22" FontWeight="Bold" Foreground="#FFFDFAFA" Background="#FF610707"/>
         <Label Content="Rank Provinces by Cities" HorizontalAlignment="Left" Margin="426,99,0,0" VerticalAlignment="Top" Width="258" Background="#FF650606" Foreground="#FFFDFAFA" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="426,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="242" Height="152" Background="#FFEFD7D7"/>
+        <TextBox x:Name="cityList" HorizontalAlignment="Left" Margin="426,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="242" Height="152" Background="#FFEFD7D7" Loaded="cityList_Loaded"/>
         <Label Content="Rank Provinces by Population" HorizontalAlignment="Left" Margin="108,99,0,0" VerticalAlignment="Top" Width="258" Background="#FF650606" Foreground="#FFFDFAFA" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="108,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="241" Height="151" Background="#FFEFD7D7"/>
-
+        <TextBox x:Name="popList" HorizontalAlignment="Left" Margin="108,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="241" Height="151" Background="#FFEFD7D7" Loaded="popList_Loaded"/>
     </Grid>
 </Window>

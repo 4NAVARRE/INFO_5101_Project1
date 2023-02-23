@@ -140,7 +140,6 @@ namespace INFO_5101_Project1.BackEnd
             List<string> list = new();
             int[] population = new int[13];
             List<int> rankedPop = new();
-            string[] combined = new string[13];
             foreach (var tmp in CityCatalogue.Values)
             {
                 list.Add(tmp.province);
@@ -167,13 +166,15 @@ namespace INFO_5101_Project1.BackEnd
                     }
                 }
             }
-            for (int i = 0; i < 13; i++)
+            List<ProvincePopulation> provincePopulations = new();
+            for (int i = 0; i < pvs.Length; i++)
             {
-                combined[i] = pvs[i] + "," + population[i];
+                provincePopulations.Add(new ProvincePopulation { Province = pvs[i], Population = population[i] });
             }
-            Array.Sort(combined, (x, y) => x.CompareTo(y));
+            provincePopulations.Sort((x, y) => x.Population.CompareTo(y.Population));
+            string[] sortedProvinces = provincePopulations.Select(x => x.Province + ", " + x.Population).ToArray();
 
-            return combined;
+            return sortedProvinces;
         }
 
         public static string[] RankProvincesByCities()
@@ -183,7 +184,6 @@ namespace INFO_5101_Project1.BackEnd
             List<string> list = new();
             int[] cities = new int[13];
             List<int> rankedPop = new();
-            string[] combined = new string[13];
             foreach (var tmp in CityCatalogue.Values)
             {
                 list.Add(tmp.province);
@@ -211,13 +211,15 @@ namespace INFO_5101_Project1.BackEnd
                     }
                 }
             }
-            for (int i = 0; i < 13; i++)
+            List<ProvincePopulation> provincePopulations = new();
+            for (int i = 0; i < pvs.Length; i++)
             {
-                combined[i] = pvs[i] + "," + cities[i];
+                provincePopulations.Add(new ProvincePopulation { Province = pvs[i], Population = cities[i] });
             }
-            Array.Sort(combined, (x, y) => x.CompareTo(y));
+            provincePopulations.Sort((x, y) => x.Population.CompareTo(y.Population));
+            string[] sortedProvinces = provincePopulations.Select(x => x.Province + ", " + x.Population).ToArray();
 
-            return combined;
+            return sortedProvinces;
         }
 
         public static string CheckSame(string cityName)
@@ -249,5 +251,10 @@ namespace INFO_5101_Project1.BackEnd
                 return cityName.Remove(cityName.Length - 1, 1);
             }
         }
+    }
+    public class ProvincePopulation
+    {
+        public string Province { get; set; }
+        public int Population { get; set; }
     }
 }
