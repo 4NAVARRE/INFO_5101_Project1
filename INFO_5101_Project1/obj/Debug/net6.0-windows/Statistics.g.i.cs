@@ -61,7 +61,7 @@ namespace INFO_5101_Project1 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/INFO_5101_Project1;component/statistics.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/INFO_5101_Project1;V1.0.0.0;component/statistics.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Statistics.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

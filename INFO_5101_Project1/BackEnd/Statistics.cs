@@ -119,7 +119,7 @@ namespace INFO_5101_Project1.BackEnd
             cityName = CheckSame(cityName);
             if (cityName == null)
                 return;
-            
+
             CityCatalogue.TryGetValue(cityName, out var tmp);
             try
             {
@@ -160,7 +160,7 @@ namespace INFO_5101_Project1.BackEnd
             List<string> list = new();
             foreach (var tmp in CityCatalogue.Values)
             {
-                    list.Add(tmp.cityName +", "+ tmp.province);
+                list.Add(tmp.cityName + ", " + tmp.province);
             }
             return list;
         }
@@ -301,13 +301,37 @@ namespace INFO_5101_Project1.BackEnd
             {
                 if (tmp.province == prov)
                 {
-                    if(tmp.capital!="")
+                    if (tmp.capital != "")
                     {
                         return (tmp.cityName, tmp.latitude, tmp.longitude);
                     }
                 }
             }
             return ("", 0, 0);
+        }
+        public static double CalculateDistanceBetweenCities(string city1, string city2)
+        {
+            if (!CityCatalogue.ContainsKey(city1) || !CityCatalogue.ContainsKey(city2))
+            {
+                throw new ArgumentException("One or both of the cities do not exist in the CityCatalogue dictionary.");
+            }
+            CityInfo city1Info = CityCatalogue[city1];
+            CityInfo city2Info = CityCatalogue[city2];
+
+            double R = 6371e3; // Earth's radius in meters
+            double lat1 = city1Info.latitude * Math.PI / 180; // Convert to radians
+            double lat2 = city2Info.latitude * Math.PI / 180; // Convert to radians
+            double deltaLat = (city2Info.latitude - city1Info.latitude) * Math.PI / 180;
+            double deltaLon = (city2Info.longitude - city1Info.longitude) * Math.PI / 180;
+
+            double a = Math.Sin(deltaLat / 2) * Math.Sin(deltaLat / 2) +
+                Math.Cos(lat1) * Math.Cos(lat2) *
+                Math.Sin(deltaLon / 2) * Math.Sin(deltaLon / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            double distance = R * c;
+
+            return distance / 1000; // Return distance in kilometers
         }
     }
     public class ProvincePopulation
