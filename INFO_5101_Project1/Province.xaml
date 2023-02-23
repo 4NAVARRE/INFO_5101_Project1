@@ -26,9 +26,9 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37">
+        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37" Loaded="ComboBoxProvinces_Loaded">
             <ComboBoxItem IsSelected="True">Select A Province</ComboBoxItem>
-            <ComboBoxItem>Alberta</ComboBoxItem>
+            <!--<ComboBoxItem>Alberta</ComboBoxItem>
             <ComboBoxItem>British Columbia</ComboBoxItem>
             <ComboBoxItem>Manitoba</ComboBoxItem>
             <ComboBoxItem>New Brunswick</ComboBoxItem>
@@ -40,7 +40,7 @@
             <ComboBoxItem>Prince Edward Island</ComboBoxItem>
             <ComboBoxItem>Québec</ComboBoxItem>
             <ComboBoxItem>Saskatchewan</ComboBoxItem>
-            <ComboBoxItem>Yukon</ComboBoxItem>
+            <ComboBoxItem>Yukon</ComboBoxItem>-->
         </ComboBox>
         <Label Content="Cities in the Province" HorizontalAlignment="Left" Margin="444,116,0,0" VerticalAlignment="Top" Width="212" Height="35" FontSize="18" FontWeight="Bold" Background="#FF4C0202" Foreground="#FFFBF8F8"/>
         <ListView x:Name="list" HorizontalAlignment="Left" Margin="444,156,0,0" VerticalAlignment="Top" Width="266" Height="194" Background="#FFEFD7D7"/>

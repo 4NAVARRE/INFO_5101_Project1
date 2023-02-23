@@ -164,6 +164,15 @@ namespace INFO_5101_Project1.BackEnd
             }
             return list;
         }
+        public static List<string> ListProvinces()
+        {
+            List<string> list = new();
+            foreach (var tmp in CityCatalogue.Values)
+            {
+                list.Add(tmp.province);
+            }
+            return list;
+        }
         public static string[] RankProvincesByPopulation()
         {
             int count = 0;

@@ -19,9 +19,22 @@ namespace INFO_5101_Project1
     /// </summary>
     public partial class Small_Large_City : Window
     {
+        public List<string> ProvList = BackEnd.Statistics.ListProvinces();
         public Small_Large_City()
         {
             InitializeComponent();
+        }
+
+        private void ProvinceCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+                foreach (string city in ProvList)
+                {
+                    ComboBoxItem item = new()
+                    {
+                        Content = city
+                    };
+                    ProvinceCombo.Items.Add(item);
+                }
         }
     }
 }

@@ -19,6 +19,7 @@ namespace INFO_5101_Project1
     /// </summary>
     public partial class Province : Window
     {
+        public List<string> ProvList = BackEnd.Statistics.ListProvinces();
         public List<string> cities = new List<string>();
         public Province()
         {
@@ -33,6 +34,18 @@ namespace INFO_5101_Project1
             foreach (var city in cities)
             {
                 list.Items.Add(city);
+            }
+        }
+
+        private void ComboBoxProvinces_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string city in ProvList)
+            {
+                ComboBoxItem item = new()
+                {
+                    Content = city
+                };
+                ComboBoxProvinces.Items.Add(item);
             }
         }
     }

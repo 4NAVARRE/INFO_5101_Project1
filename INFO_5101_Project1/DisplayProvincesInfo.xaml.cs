@@ -19,6 +19,7 @@ namespace INFO_5101_Project1
     /// </summary>
     public partial class DisplayProvincesInfo : Window
     {
+        public List<string> ProvList = BackEnd.Statistics.ListProvinces();
         public DisplayProvincesInfo()
         {
             InitializeComponent();
@@ -31,6 +32,18 @@ namespace INFO_5101_Project1
             ProvCap.Text = BackEnd.Statistics.GetCapital(prov).Item1;
             ProvLat.Text = BackEnd.Statistics.GetCapital(prov).Item2.ToString();
             ProvLon.Text = BackEnd.Statistics.GetCapital(prov).Item3.ToString();
+        }
+
+        private void ComboBoxProvinces_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string city in ProvList)
+            {
+                ComboBoxItem item = new()
+                {
+                    Content = city
+                };
+                ComboBoxProvinces.Items.Add(item);
+            }
         }
     }
 }
