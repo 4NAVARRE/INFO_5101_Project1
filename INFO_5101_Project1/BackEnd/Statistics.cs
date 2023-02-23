@@ -25,6 +25,8 @@ namespace INFO_5101_Project1.BackEnd
         public static CityInfo? DisplayCityInformation(string Name)
         {
             Name = CheckSame(Name);
+            if (Name == null)
+                return null;
             if (CityCatalogue.TryGetValue(Name, out CityInfo? tmp))
             {
                 return tmp;

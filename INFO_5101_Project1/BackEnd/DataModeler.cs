@@ -59,6 +59,7 @@ namespace INFO_5101_Project1.BackEnd
         {
             // Code to parse JSON file
             string json = File.ReadAllText(fileName);
+            List<string> duplicated = new List<string>();
             JArray cityArray = JArray.Parse(json);
             int tmp = 1;
 
@@ -82,8 +83,18 @@ namespace INFO_5101_Project1.BackEnd
                     }
                     catch
                     {
-                        data.Add(cityName + $"{tmp}", cityInfo);
-                        tmp++;
+                        string ifExist = "";
+                        while (true)
+                        {
+                            ifExist = cityName + $"{tmp}";
+                            if (!duplicated.Contains(ifExist))
+                                break;
+                            tmp++;
+                        }
+
+                        data.Add(ifExist, cityInfo);
+
+
                     }
                 }
                 catch { }
@@ -94,6 +105,7 @@ namespace INFO_5101_Project1.BackEnd
         {
             using StreamReader reader = new(fileName);
             int tmp = 1;
+            List<string> duplicated = new List<string>();
             reader.ReadLine(); // Skip header line
             while (!reader.EndOfStream)
             {
@@ -117,8 +129,18 @@ namespace INFO_5101_Project1.BackEnd
                 }
                 catch
                 {
-                    data.Add(cityName + $"{tmp}", cityInfo);
-                    tmp++;
+                    string ifExist = "";
+                    while (true)
+                    {
+                        ifExist = cityName + $"{tmp}";
+                        if (!duplicated.Contains(ifExist))
+                            break;
+                        tmp++;
+                    }
+
+                    data.Add(ifExist, cityInfo);
+
+
                 }
             }
         }
