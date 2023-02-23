@@ -8,7 +8,7 @@
         Title="Statistics" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="res/background3.jpg"/>
+            <ImageBrush ImageSource="/background3.jpg"/>
         </Grid.Background>
         <Button Content="" HorizontalAlignment="Left" Margin="227,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.842,-1.2" Width="130" Height="113">
             <Button.Resources>
@@ -17,7 +17,7 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="res/city_button.png"/>
+                <ImageBrush ImageSource="/city_button.png"/>
             </Button.Background>
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="421,143,0,0" VerticalAlignment="Top" Width="130" Height="113">
@@ -27,7 +27,7 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="res/province_button.png"/>
+                <ImageBrush ImageSource="/province_button.png"/>
             </Button.Background>
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="307,296,0,0" VerticalAlignment="Top" Width="130" Height="113" RenderTransformOrigin="0.465,0.785">
@@ -37,7 +37,7 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="res/province_population_button.png"/>
+                <ImageBrush ImageSource="/province_population_button.png"/>
             </Button.Background>
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="598,143,0,0" VerticalAlignment="Top" Width="130" Height="113">
@@ -47,7 +47,7 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="res/city_match_button.png"/>
+                <ImageBrush ImageSource="/city_match_button.png"/>
             </Button.Background>
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="504,296,0,0" VerticalAlignment="Top" Width="130" Height="113">
@@ -57,15 +57,15 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="res/city_distance_button.png"/>
+                <ImageBrush ImageSource="/city_distance_button.png"/>
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="217" Margin="10,192,0,0" VerticalAlignment="Top" Width="100" Source="res/tower.jpg" Stretch="Fill">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="res/tower.jpg"/>
+                <ImageBrush ImageSource="/tower.jpg"/>
             </Image.OpacityMask>
         </Image>
-        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="179" Source="res/statistic.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="179" Source="/statistic.jpg" Stretch="Fill"/>
 
     </Grid>
 </Window>

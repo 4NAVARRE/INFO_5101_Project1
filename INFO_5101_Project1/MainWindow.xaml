@@ -28,7 +28,7 @@
             <Border Background="#FF1E1D2B" CornerRadius="20" Grid.ColumnSpan="2">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="12.5"/>
+                        <RowDefinition Height="1.5"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace INFO_5101_Project1.BackEnd
 {
@@ -217,6 +218,36 @@ namespace INFO_5101_Project1.BackEnd
             Array.Sort(combined, (x, y) => x.CompareTo(y));
 
             return combined;
+        }
+
+        public string CheckSame(string cityName)
+        {
+            cityName += cityName + "1";
+            if (CityCatalogue.ContainsKey(cityName))
+            {
+                cityName.Remove(cityName.Length - 1, 1);
+                CityCatalogue.TryGetValue(cityName, out var findResult);
+                MessageBoxResult result = MessageBox.Show($"Are you thinking about {findResult.cityAscii} in {findResult.province}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                int tmp = 1;
+                while (true)
+                {
+                    cityName += cityName + $"{tmp}";
+                    if (CityCatalogue.TryGetValue(cityName, out findResult))
+                        result = MessageBox.Show($"Are you thinking about {findResult.cityAscii} in {findResult.province}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    else
+                        break;
+                    if (result == MessageBoxResult.Yes)
+                        return cityName;
+
+                    tmp++;
+                }
+                return null;
+            }
+            else
+            {
+                return cityName.Remove(cityName.Length - 1, 1);
+            }
         }
     }
 }
