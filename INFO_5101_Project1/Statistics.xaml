@@ -60,7 +60,7 @@
                 <ImageBrush ImageSource="/city_match_button.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="608,87,0,0" VerticalAlignment="Top" Width="130" Height="113">
+        <Button Content="" HorizontalAlignment="Left" Margin="608,87,0,0" VerticalAlignment="Top" Width="130" Height="113" Click="Button_Click_3">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

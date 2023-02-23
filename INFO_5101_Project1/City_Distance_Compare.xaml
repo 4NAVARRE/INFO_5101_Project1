@@ -11,20 +11,16 @@
             <ImageBrush ImageSource="/background1.png"/>
         </Grid.Background>
         <Label Content="City 1:" HorizontalAlignment="Left" Margin="93,136,0,0" VerticalAlignment="Top" Width="77" FontSize="18" FontWeight="Bold" Foreground="#FF061275"/>
-        <TextBox HorizontalAlignment="Left" Margin="400,170,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847" />
-        <Label Content="Total Distance" HorizontalAlignment="Left" Margin="400,136,0,0" VerticalAlignment="Top" Width="145" Foreground="#FF05165D" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.538,0.738"/>
-        <ComboBox HorizontalAlignment="Left" Margin="93,170,0,0" VerticalAlignment="Top" Width="219" Height="33">
-            <ComboBoxItem>City</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">City 2</ComboBoxItem>
-            <ComboBoxItem>City 3</ComboBoxItem>
+        <TextBox x:Name="DistanceText" HorizontalAlignment="Left" Margin="400,170,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847" />
+        <Label Content="Total Distance" HorizontalAlignment="Left" Margin="400,136,0,0" VerticalAlignment="Top" Width="129" Foreground="#FF05165D" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FFBB7834"/>
+        <ComboBox x:Name="City1" HorizontalAlignment="Left" Margin="93,170,0,0" VerticalAlignment="Top" Width="219" Height="33" Loaded="City1_Loaded">
+            <ComboBoxItem IsSelected="True">Cities</ComboBoxItem>
         </ComboBox>
         <Label Content="City 2:" HorizontalAlignment="Left" Margin="93,217,0,0" VerticalAlignment="Top" Width="69" FontSize="18" FontWeight="Bold" Foreground="#FF041369"/>
-        <ComboBox HorizontalAlignment="Left" Margin="93,251,0,0" VerticalAlignment="Top" Width="219" Height="33">
-            <ComboBoxItem>City</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">City 2</ComboBoxItem>
-            <ComboBoxItem>City 3</ComboBoxItem>
+        <ComboBox x:Name="City2" HorizontalAlignment="Left" Margin="93,251,0,0" VerticalAlignment="Top" Width="219" Height="33" Loaded="City2_Loaded">
+            <ComboBoxItem IsSelected="True">Cities</ComboBoxItem>
         </ComboBox>
-        <Button Content="Calculate" HorizontalAlignment="Left" Margin="93,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="49" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67">
+        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="93,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="49" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67" Click="Calculate_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

@@ -51,5 +51,11 @@ namespace INFO_5101_Project1
             Citys cityPage = new();
             cityPage.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            City_Distance_Compare cityPage = new();
+            cityPage.Show();
+        }
     }
 }
