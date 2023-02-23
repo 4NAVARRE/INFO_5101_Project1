@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jsrwJM8d4+NPIbwszDEhsMOxloxKOJKdYnQYzDLylyltkq/+9uejI5f4yrvU93PL9jPpNlWymUWKxITzJjOF1Q==",
+  "dgSpecHash": "QePYuzB7fnK1mZfRJkVCZKP6dDTgtmwseq4xa1+aPNzlJl11lOPXA98RieBxRd71HTuxaW3HOzZOsyJzQL+OHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrsta\\GitData\\INFO_5101_Project1\\INFO_5101_Project1\\INFO_5101_Project1.csproj",
+  "projectFilePath": "C:\\Users\\kierk\\OneDrive\\Documents\\GitHub\\INFO_5101_Project1\\INFO_5101_Project1\\INFO_5101_Project1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mrsta\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\kierk\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

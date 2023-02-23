@@ -39,5 +39,11 @@ namespace INFO_5101_Project1
             CitiesInfo cityInfoPage = new();
             cityInfoPage.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DisplayProvincesInfo provPopPage = new();
+            provPopPage.Show();
+        }
     }
 }

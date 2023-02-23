@@ -12,12 +12,27 @@
         </Grid.Background>
         <Label Content="Province" HorizontalAlignment="Left" Margin="108,39,0,0" VerticalAlignment="Top" Width="106" FontSize="22" FontWeight="Bold" Foreground="#FFFDFAFA" Background="#FF610707"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="108,89,0,0" VerticalAlignment="Top" Width="87" Foreground="#FFFDFBFB" FontSize="17" FontWeight="Bold" Background="#FF5A0707"/>
-        <Label Content="Population of the Province: " HorizontalAlignment="Left" Margin="108,194,0,0" VerticalAlignment="Top" Width="246" Foreground="#FFFBF9F9" FontSize="17" FontWeight="Bold" Background="#FF5B0505"/>
-        <TextBox HorizontalAlignment="Left" Margin="200,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.212,0.837" Height="26"/>
-        <TextBox HorizontalAlignment="Left" Margin="364,194,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Height="33"/>
+        <Label Content="Population of the Province: " HorizontalAlignment="Left" Margin="113,171,0,0" VerticalAlignment="Top" Width="246" Foreground="#FFFBF9F9" FontSize="17" FontWeight="Bold" Background="#FF5B0505"/>
+        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="212,87,0,0" VerticalAlignment="Top" Width="262" Height="37">
+            <ComboBoxItem IsSelected="True">Select A Province</ComboBoxItem>
+            <ComboBoxItem>Alberta</ComboBoxItem>
+            <ComboBoxItem>British Columbia</ComboBoxItem>
+            <ComboBoxItem>Manitoba</ComboBoxItem>
+            <ComboBoxItem>New Brunswick</ComboBoxItem>
+            <ComboBoxItem>Newfoundland and Labrador</ComboBoxItem>
+            <ComboBoxItem>Northwest Territories</ComboBoxItem>
+            <ComboBoxItem>Nova Scotia</ComboBoxItem>
+            <ComboBoxItem>Nunavut</ComboBoxItem>
+            <ComboBoxItem>Ontario</ComboBoxItem>
+            <ComboBoxItem>Prince Edward Island</ComboBoxItem>
+            <ComboBoxItem>Québec</ComboBoxItem>
+            <ComboBoxItem>Saskatchewan</ComboBoxItem>
+            <ComboBoxItem>Yukon</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="ProvPop" HorizontalAlignment="Left" Margin="364,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="33"/>
         <Label Content="Capital of the Province:" HorizontalAlignment="Left" Margin="108,237,0,0" VerticalAlignment="Top" Width="209" Height="31" Background="#FF5B0606" Foreground="#FFFBF8F8" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.478,2.453"/>
-        <TextBox HorizontalAlignment="Left" Margin="332,237,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="232" Height="31"/>
-        <Button Content="Search Info" HorizontalAlignment="Left" Margin="108,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="36" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67" >
+        <TextBox x:Name="ProvCap" HorizontalAlignment="Left" Margin="332,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232" Height="31"/>
+        <Button Content="Search Info" HorizontalAlignment="Left" Margin="503,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="36" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67" Click="Button_Click" >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
