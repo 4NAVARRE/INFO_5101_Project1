@@ -9,7 +9,7 @@ namespace INFO_5101_Project1.BackEnd
 {
     public class Statistics
     {
-        public Dictionary<string, CityInfo> CityCatalogue { get; }
+        public static Dictionary<string, CityInfo> CityCatalogue { get; set; }
 
         public Statistics(string fileName, string fileType)
         {
@@ -22,7 +22,7 @@ namespace INFO_5101_Project1.BackEnd
             CityCatalogue = new Dictionary<string, CityInfo>();
         }
 
-        public CityInfo? DisplayCityInformation(string Name)
+        public static CityInfo? DisplayCityInformation(string Name)
         {
             if (CityCatalogue.TryGetValue(Name, out CityInfo? tmp))
             {
@@ -35,7 +35,7 @@ namespace INFO_5101_Project1.BackEnd
 
         }
 
-        public string? DisplayLargestPopulationCity(string province)
+        public static string? DisplayLargestPopulationCity(string province)
         {
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
             CityInfo? tmp = null;
@@ -55,7 +55,7 @@ namespace INFO_5101_Project1.BackEnd
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
-        public string DisplaySmallestPopulationCity(string province)
+        public static string DisplaySmallestPopulationCity(string province)
         {
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
             CityInfo? tmp = null;
@@ -73,7 +73,7 @@ namespace INFO_5101_Project1.BackEnd
             return tmp.cityName;
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
-        public string CompareCitiesPopulation(string city1, string city2)
+        public static string CompareCitiesPopulation(string city1, string city2)
         {
             CityInfo? tmp1 = null;
             CityInfo? tmp2 = null;
@@ -109,7 +109,7 @@ namespace INFO_5101_Project1.BackEnd
                 throw argumentNullException;
             }
         }
-        public int DisplayProvincePopulation(string province)
+        public static int DisplayProvincePopulation(string province)
         {
             int totalPop = 0;
             foreach (var tmp in CityCatalogue.Values)
@@ -121,7 +121,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             return totalPop;
         }
-        public List<string> DisplayProvinceCities(string province)
+        public static List<string> DisplayProvinceCities(string province)
         {
             List<string> list = new();
             foreach (var tmp in CityCatalogue.Values)
@@ -133,7 +133,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             return list;
         }
-        public string[] RankProvincesByPopulation()
+        public static string[] RankProvincesByPopulation()
         {
             int count = 0;
             string[] pvs = new string[13];
@@ -176,7 +176,7 @@ namespace INFO_5101_Project1.BackEnd
             return combined;
         }
 
-        public string[] RankProvincesByCities()
+        public static string[] RankProvincesByCities()
         {
             int count = 0;
             string[] pvs = new string[13];
@@ -220,7 +220,7 @@ namespace INFO_5101_Project1.BackEnd
             return combined;
         }
 
-        public string CheckSame(string cityName)
+        public static string CheckSame(string cityName)
         {
             cityName += cityName + "1";
             if (CityCatalogue.ContainsKey(cityName))

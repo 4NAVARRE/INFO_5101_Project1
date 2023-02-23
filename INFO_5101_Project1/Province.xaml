@@ -26,7 +26,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37" DataContextChanged="Province_Change">
+        <ComboBox x:Name="ComboBoxProvinces" HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37">
             <ComboBoxItem IsSelected="True">Select A Province</ComboBoxItem>
             <ComboBoxItem>Alberta</ComboBoxItem>
             <ComboBoxItem>British Columbia</ComboBoxItem>

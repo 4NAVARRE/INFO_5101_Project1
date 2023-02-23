@@ -25,14 +25,10 @@ namespace INFO_5101_Project1
             InitializeComponent();
         }
 
-        private void Province_Change(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            string? prov = sender.ToString();
-            BackEnd.Statistics statistics = new();
-            cities = statistics.DisplayProvinceCities(prov);
-        }
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            string prov = ComboBoxProvinces.Text;
+            cities = BackEnd.Statistics.DisplayProvinceCities(prov);
             list.Items.Clear();
             foreach (var city in cities)
             {
