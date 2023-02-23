@@ -95,11 +95,11 @@ namespace INFO_5101_Project1.BackEnd
             {
                 if (tmp1.population > tmp2.population)
                 {
-                    return tmp1.cityName + "Has the larger population.";
+                    return tmp1.cityName + ", " + tmp1.population;
                 }
                 else if (tmp2.population > tmp1.population)
                 {
-                    return tmp2.cityName + "Has the larger population.";
+                    return tmp2.cityName + ", " + tmp2.population;
                 }
                 else
                 {
@@ -133,6 +133,15 @@ namespace INFO_5101_Project1.BackEnd
                 {
                     list.Add(tmp.cityName);
                 }
+            }
+            return list;
+        }
+        public static List<string> ListCities()
+        {
+            List<string> list = new();
+            foreach (var tmp in CityCatalogue.Values)
+            {
+                    list.Add(tmp.cityName +", "+ tmp.province);
             }
             return list;
         }
