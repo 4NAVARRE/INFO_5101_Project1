@@ -9,6 +9,10 @@
 
   <ItemGroup>
     <None Remove="city_match_button.png" />
+    <None Remove="csv.png" />
+    <None Remove="json.png" />
+    <None Remove="mainBackground.png" />
+    <None Remove="xml.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,7 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="csv.png" />
+    <Resource Include="json.png" />
+    <Resource Include="mainBackground.png" />
     <Resource Include="res\city_match_button.png" />
+    <Resource Include="xml.png" />
   </ItemGroup>
 
 </Project>
