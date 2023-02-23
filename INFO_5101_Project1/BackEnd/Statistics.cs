@@ -24,6 +24,7 @@ namespace INFO_5101_Project1.BackEnd
 
         public static CityInfo? DisplayCityInformation(string Name)
         {
+            Name = CheckSame(Name);
             if (CityCatalogue.TryGetValue(Name, out CityInfo? tmp))
             {
                 return tmp;
@@ -224,10 +225,10 @@ namespace INFO_5101_Project1.BackEnd
 
         public static string CheckSame(string cityName)
         {
-            cityName += cityName + "1";
+            cityName += "1";
             if (CityCatalogue.ContainsKey(cityName))
             {
-                cityName.Remove(cityName.Length - 1, 1);
+                cityName.Substring(0, cityName.Length - 1);
                 CityCatalogue.TryGetValue(cityName, out var findResult);
                 MessageBoxResult result = MessageBox.Show($"Are you thinking about {findResult.cityAscii} in {findResult.province}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
@@ -248,7 +249,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             else
             {
-                return cityName.Remove(cityName.Length - 1, 1);
+                return cityName.Substring(0, cityName.Length - 1);
             }
         }
     }

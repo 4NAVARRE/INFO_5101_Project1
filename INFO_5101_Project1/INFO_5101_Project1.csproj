@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="background1.png" />
     <None Remove="background3.jpg" />
     <None Remove="city_button.png" />
     <None Remove="city_distance_button.png" />
@@ -28,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="background1.png" />
     <Resource Include="background3.jpg" />
     <Resource Include="city_button.png" />
     <Resource Include="city_distance_button.png" />

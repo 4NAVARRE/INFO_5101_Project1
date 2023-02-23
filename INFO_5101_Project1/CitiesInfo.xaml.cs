@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INFO_5101_Project1.BackEnd;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,14 @@ namespace INFO_5101_Project1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            CityInfo selectedCity = BackEnd.Statistics.DisplayCityInformation(cityInputTextBox.Text);
 
+            CitiesInfoNameField.Text = selectedCity?.cityAscii;
+            CitiesInfoLatitudeField.Text = selectedCity?.latitude.ToString();
+            CitiesInfoLongtitudeField.Text = selectedCity?.longitude.ToString();
+            CitiesInfoCountryField.Text = selectedCity?.country;
+            CitiesInfoProvinceField.Text = selectedCity?.province;
+            CitiesInfoPopulationField.Text = selectedCity?.population.ToString();
         }
     }
 }

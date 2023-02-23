@@ -10,14 +10,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="/background1.png"/>
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Margin="246,36,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="139" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox HorizontalAlignment="Left" Margin="246,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="33" RenderTransformOrigin="0.454,-0.847"/>
         <Label Content="Largest population City:" HorizontalAlignment="Left" Margin="22,36,0,0" VerticalAlignment="Top" Width="207" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF17CACE"/>
-        <ComboBox HorizontalAlignment="Left" Margin="93,232,0,0" VerticalAlignment="Top" Width="219" Height="33">
+        <!--<ComboBox HorizontalAlignment="Left" Margin="93,232,0,0" VerticalAlignment="Top" Width="219" Height="33">
             <ComboBoxItem>City</ComboBoxItem>
             <ComboBoxItem IsSelected="True">City 2</ComboBoxItem>
             <ComboBoxItem>City 3</ComboBoxItem>
-        </ComboBox>
-        <Button Content="Search Info" HorizontalAlignment="Left" Margin="93,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="49" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67" Click="Button_Click">
+        </ComboBox>-->
+        <TextBox x:Name="cityInputTextBox" HorizontalAlignment="Left" Margin="93,232,0,0" VerticalAlignment="Top" Width="219" Height="33" />
+        <Button x:Name="CitiesInfoSearchButton" Content="Search Info" HorizontalAlignment="Left" Margin="93,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.77,2.382" Width="146" Height="49" FontSize="20" Foreground="#FFFDFBFB" BorderThickness="4,4,4,4" BorderBrush="#FFFBF8F8" Background="#FF051D67" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -27,21 +28,21 @@
         <Label Content="Population:" HorizontalAlignment="Left" Margin="410,37,0,0" VerticalAlignment="Top" Width="116" Height="32" Foreground="#FF091365" FontSize="17" FontWeight="Bold" Background="#FF1FC9CC"/>
         <TextBox HorizontalAlignment="Left" Margin="531,37,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187" Height="33"/>
         <Label Content="Smallest population City:" HorizontalAlignment="Left" Margin="22,74,0,0" VerticalAlignment="Top" Width="207" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
-        <TextBox HorizontalAlignment="Left" Margin="512,210,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox x:Name="CitiesInfoLongtitudeField" HorizontalAlignment="Left" Margin="512,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True"/>
         <Label Content="Longitude:" HorizontalAlignment="Left" Margin="361,208,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
-        <TextBox HorizontalAlignment="Left" Margin="246,74,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="139" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox HorizontalAlignment="Left" Margin="246,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="33" RenderTransformOrigin="0.454,-0.847"/>
         <Label Content="Population:" HorizontalAlignment="Left" Margin="410,74,0,0" VerticalAlignment="Top" Width="116" Height="32" Foreground="#FF091365" FontSize="17" FontWeight="Bold" Background="#FF1FC9CC"/>
         <TextBox HorizontalAlignment="Left" Margin="531,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187" Height="33"/>
         <Label Content="City:" HorizontalAlignment="Left" Margin="93,186,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="361,132,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="512,132,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="206" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox x:Name="CitiesInfoNameField" HorizontalAlignment="Left" Margin="512,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="33" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True"/>
         <Label Content="Latitude:" HorizontalAlignment="Left" Margin="361,170,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
-        <TextBox HorizontalAlignment="Left" Margin="512,170,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="206" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox x:Name="CitiesInfoLatitudeField" HorizontalAlignment="Left" Margin="512,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="33" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True"/>
         <Label Content="Country:" HorizontalAlignment="Left" Margin="361,246,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
         <Label Content="Province:" HorizontalAlignment="Left" Margin="361,286,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
         <Label Content="Population:" HorizontalAlignment="Left" Margin="361,324,0,0" VerticalAlignment="Top" Width="136" Foreground="#FF05165D" FontSize="17" FontWeight="Bold" RenderTransformOrigin="0.538,0.738" Background="#FF1BD2D6"/>
-        <TextBox HorizontalAlignment="Left" Margin="513,322,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="32" RenderTransformOrigin="0.454,-0.847"/>
-        <TextBox HorizontalAlignment="Left" Margin="513,286,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847"/>
-        <TextBox HorizontalAlignment="Left" Margin="513,248,0,0" TextWrapping="Wrap" Text="ttttt" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847"/>
+        <TextBox x:Name="CitiesInfoPopulationField" HorizontalAlignment="Left" Margin="513,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="32" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True" IsUndoEnabled="False"/>
+        <TextBox x:Name="CitiesInfoProvinceField" HorizontalAlignment="Left" Margin="513,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True"/>
+        <TextBox x:Name="CitiesInfoCountryField" HorizontalAlignment="Left" Margin="513,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="33" RenderTransformOrigin="0.454,-0.847" IsReadOnly="True"/>
     </Grid>
 </Window>

@@ -33,5 +33,11 @@ namespace INFO_5101_Project1
             Display_Province_Rank pr = new();
             pr.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CitiesInfo cityInfoPage = new();
+            cityInfoPage.Show();
+        }
     }
 }
