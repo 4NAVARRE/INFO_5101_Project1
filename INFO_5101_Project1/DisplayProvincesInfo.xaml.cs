@@ -28,6 +28,7 @@ namespace INFO_5101_Project1
         {
             string prov = ComboBoxProvinces.Text;
             ProvPop.Text = BackEnd.Statistics.DisplayProvincePopulation(prov).ToString();
+            ProvCap.Text = BackEnd.Statistics.GetCapital(prov).ToString();
         }
     }
 }

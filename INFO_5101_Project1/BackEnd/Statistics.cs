@@ -286,6 +286,20 @@ namespace INFO_5101_Project1.BackEnd
                 return cityName.Substring(0, cityName.Length - 1);
             }
         }
+        public static string GetCapital(string prov)
+        {
+            foreach (var tmp in CityCatalogue.Values)
+            {
+                if (tmp.province == prov)
+                {
+                    if(tmp.capital!="")
+                    {
+                        return tmp.cityName;
+                    }
+                }
+            }
+            return null;
+        }
     }
     public class ProvincePopulation
     {
