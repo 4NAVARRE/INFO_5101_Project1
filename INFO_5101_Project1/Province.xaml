@@ -8,19 +8,45 @@
         Title="Province" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="res/background3.jpg"/>
+            <ImageBrush ImageSource="/background3.jpg"/>
         </Grid.Background>
         <Label Content="Province" HorizontalAlignment="Left" Margin="120,114,0,0" VerticalAlignment="Top" Width="116" FontSize="22" FontWeight="Bold" Background="#FF380404" Foreground="#FFF9F6F6"/>
-        <ComboBox HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37">
-            <ComboBoxItem>Province</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">Province 2</ComboBoxItem>
-            <ComboBoxItem>Province 3</ComboBoxItem>
+        <Button x:Name="Submit_Button" Padding="10" Content="Submit" HorizontalAlignment="Left" Margin="257,117,0,0" VerticalAlignment="Top" Width="100" Height="40" RenderTransformOrigin="0.508,2.444" FontWeight="Bold" FontSize="12" BorderThickness="3,3,3,3" Click="Submit_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.272"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ComboBox HorizontalAlignment="Left" Margin="120,158,0,0" VerticalAlignment="Top" Width="262" Height="37" DataContextChanged="Province_Change">
+            <ComboBoxItem IsSelected="True">Select A Province</ComboBoxItem>
+            <ComboBoxItem>Alberta</ComboBoxItem>
+            <ComboBoxItem>British Columbia</ComboBoxItem>
+            <ComboBoxItem>Manitoba</ComboBoxItem>
+            <ComboBoxItem>New Brunswick</ComboBoxItem>
+            <ComboBoxItem>Newfoundland and Labrador</ComboBoxItem>
+            <ComboBoxItem>Northwest Territories</ComboBoxItem>
+            <ComboBoxItem>Nova Scotia</ComboBoxItem>
+            <ComboBoxItem>Nunavut</ComboBoxItem>
+            <ComboBoxItem>Ontario</ComboBoxItem>
+            <ComboBoxItem>Prince Edward Island</ComboBoxItem>
+            <ComboBoxItem>Québec</ComboBoxItem>
+            <ComboBoxItem>Saskatchewan</ComboBoxItem>
+            <ComboBoxItem>Yukon</ComboBoxItem>
         </ComboBox>
         <Label Content="Cities in the Province" HorizontalAlignment="Left" Margin="444,116,0,0" VerticalAlignment="Top" Width="212" Height="35" FontSize="18" FontWeight="Bold" Background="#FF4C0202" Foreground="#FFFBF8F8"/>
-        <TextBox HorizontalAlignment="Left" Margin="444,156,0,0" TextWrapping="Wrap" Text="MultiLine" VerticalAlignment="Top" Width="266" Height="194" Background="#FFEFD7D7" />
+        <ListView x:Name="list" HorizontalAlignment="Left" Margin="444,156,0,0" VerticalAlignment="Top" Width="266" Height="194" Background="#FFEFD7D7"/>
         <Image HorizontalAlignment="Left" Height="147" Margin="120,203,0,0" VerticalAlignment="Top" Width="259" Source="res/map2.png" Stretch="Fill" >
             <Image.OpacityMask>
-                <ImageBrush ImageSource="res/map2.png"/>
+                <ImageBrush ImageSource="/map2.png"/>
             </Image.OpacityMask>
         </Image>
 

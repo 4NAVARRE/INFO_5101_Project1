@@ -15,6 +15,7 @@
     <None Remove="csv.png" />
     <None Remove="json.png" />
     <None Remove="mainBackground.png" />
+    <None Remove="map2.png" />
     <None Remove="province_button.png" />
     <None Remove="province_population_button.png" />
     <None Remove="statistic.jpg" />
@@ -34,6 +35,7 @@
     <Resource Include="csv.png" />
     <Resource Include="json.png" />
     <Resource Include="mainBackground.png" />
+    <Resource Include="map2.png" />
     <Resource Include="province_button.png" />
     <Resource Include="province_population_button.png" />
     <Resource Include="res\city_match_button.png" />

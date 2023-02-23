@@ -23,5 +23,10 @@ namespace INFO_5101_Project1
         {
             InitializeComponent();
         }
+        private void ProvCityClick(object sender, RoutedEventArgs e)
+        {
+            Province provPage = new();
+            provPage.Show();
+        }
     }
 }

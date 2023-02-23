@@ -19,9 +19,25 @@ namespace INFO_5101_Project1
     /// </summary>
     public partial class Province : Window
     {
+        public List<string> cities = new List<string>();
         public Province()
         {
             InitializeComponent();
+        }
+
+        private void Province_Change(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            string? prov = sender.ToString();
+            BackEnd.Statistics statistics = new();
+            cities = statistics.DisplayProvinceCities(prov);
+        }
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+            list.Items.Clear();
+            foreach (var city in cities)
+            {
+                list.Items.Add(city);
+            }
         }
     }
 }
