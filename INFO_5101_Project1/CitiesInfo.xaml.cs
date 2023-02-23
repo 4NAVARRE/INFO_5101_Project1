@@ -29,12 +29,15 @@ namespace INFO_5101_Project1
         {
             CityInfo selectedCity = BackEnd.Statistics.DisplayCityInformation(cityInputTextBox.Text);
 
-            CitiesInfoNameField.Text = selectedCity?.cityAscii;
-            CitiesInfoLatitudeField.Text = selectedCity?.latitude.ToString();
-            CitiesInfoLongtitudeField.Text = selectedCity?.longitude.ToString();
-            CitiesInfoCountryField.Text = selectedCity?.country;
-            CitiesInfoProvinceField.Text = selectedCity?.province;
-            CitiesInfoPopulationField.Text = selectedCity?.population.ToString();
+            if (selectedCity != null)
+            {
+                CitiesInfoNameField.Text = selectedCity?.cityAscii;
+                CitiesInfoLatitudeField.Text = selectedCity?.latitude.ToString();
+                CitiesInfoLongtitudeField.Text = selectedCity?.longitude.ToString();
+                CitiesInfoCountryField.Text = selectedCity?.country;
+                CitiesInfoProvinceField.Text = selectedCity?.province;
+                CitiesInfoPopulationField.Text = selectedCity?.population.ToString();
+            }
         }
     }
 }

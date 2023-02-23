@@ -228,14 +228,18 @@ namespace INFO_5101_Project1.BackEnd
             cityName += "1";
             if (CityCatalogue.ContainsKey(cityName))
             {
-                cityName.Substring(0, cityName.Length - 1);
+                cityName = cityName.Substring(0, cityName.Length - 1);
                 CityCatalogue.TryGetValue(cityName, out var findResult);
                 MessageBoxResult result = MessageBox.Show($"Are you thinking about {findResult.cityAscii} in {findResult.province}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    return cityName;
+                }
 
                 int tmp = 1;
                 while (true)
                 {
-                    cityName += cityName + $"{tmp}";
+                    cityName += $"{tmp}";
                     if (CityCatalogue.TryGetValue(cityName, out findResult))
                         result = MessageBox.Show($"Are you thinking about {findResult.cityAscii} in {findResult.province}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     else

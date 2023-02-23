@@ -18,6 +18,7 @@ namespace INFO_5101_Project1.BackEnd
         private void ParseXML(string fileName)
         {
             XmlDocument doc = new();
+            List <string> duplicated = new List<string> ();
             int tmp = 1;
             doc.Load(fileName);
             XmlNodeList cityNodes = doc.SelectNodes("//CanadaCity");
@@ -38,8 +39,18 @@ namespace INFO_5101_Project1.BackEnd
                 }
                 catch
                 {
-                    data.Add(cityName + $"{tmp}", cityInfo);
-                    tmp++;
+                    string ifExist= "";
+                    while (true)
+                    {
+                        ifExist = cityName + $"{tmp}";
+                        if (!duplicated.Contains(ifExist))
+                            break;
+                        tmp++;
+                    }
+                    
+                    data.Add(ifExist, cityInfo);
+
+                    
                 }
             }
         }
