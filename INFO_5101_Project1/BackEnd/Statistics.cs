@@ -286,7 +286,7 @@ namespace INFO_5101_Project1.BackEnd
                 return cityName.Substring(0, cityName.Length - 1);
             }
         }
-        public static string GetCapital(string prov)
+        public static (string, double, double) GetCapital(string prov)
         {
             foreach (var tmp in CityCatalogue.Values)
             {
@@ -294,11 +294,11 @@ namespace INFO_5101_Project1.BackEnd
                 {
                     if(tmp.capital!="")
                     {
-                        return tmp.cityName;
+                        return (tmp.cityName, tmp.latitude, tmp.longitude);
                     }
                 }
             }
-            return null;
+            return ("", 0, 0);
         }
     }
     public class ProvincePopulation
