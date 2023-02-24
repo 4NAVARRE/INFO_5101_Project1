@@ -38,14 +38,14 @@ namespace INFO_5101_Project1
                 }
         }
 
-        private void SearchInfo_CitySize_Loaded(object sender, RoutedEventArgs e)
+        private void SearchInfo_CitySize_Click(object sender, RoutedEventArgs e)
         {
             string prov = ProvinceCombo.Text;
-            //string temp = BackEnd.Statistics.DisplayLargestPopulationCity(prov);
-            //LargestCity.Text = temp;
+            string temp = BackEnd.Statistics.DisplayLargestPopulationCity(prov);
+            LargestCity.Text = temp;
 
-            //string temp1 = BackEnd.Statistics.DisplayLargestPopulationCity(prov);
-            //SmallestCity.Text = "Same Cities Entered";
+            string temp1 = BackEnd.Statistics.DisplaySmallestPopulationCity(prov);
+            SmallestCity.Text = temp1;
         }
     }
 }

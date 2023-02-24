@@ -118,7 +118,7 @@ namespace INFO_5101_Project1.BackEnd
         public static void ShowCityOnMap(string cityName)
         {
             cityName = CheckSame(cityName);
-            if (cityName == null)
+            if (cityName == "")
                 return;
 
             CityCatalogue.TryGetValue(cityName, out var tmp);
