@@ -122,7 +122,7 @@ namespace INFO_5101_Project1.BackEnd
                 }
                 else
                 {
-                    return "Both are the same size";
+                    return tmp1.cityName + ", " + tmp2.population;
                 }
             }
             else
@@ -135,32 +135,24 @@ namespace INFO_5101_Project1.BackEnd
         //show the map
         public static void ShowCityOnMap(string cityName)
         {
-            bool test=false;
-
             cityName = CheckSame(cityName);
-            if (cityName == "")
+            if (cityName == null)
                 return;
 
-            foreach (var city in CityCatalogue.Values)
-            {
-                if(cityName.Equals(city.cityName))
-                {
-                    test = true;
-                }
-            }
-
             CityCatalogue.TryGetValue(cityName, out var tmp);
-            
-            if(test)
+            try
             {
                 string url = $"https://www.google.com/maps/place/{tmp.latitude},{tmp.longitude}";
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
             }
-            
+            catch
+            {
+
+            }
         }
 
-        //Displays provinces total population
-        public static int DisplayProvincePopulation(string province)
+            //Displays provinces total population
+            public static int DisplayProvincePopulation(string province)
         {
             int totalPop = 0;
             foreach (var tmp in CityCatalogue.Values)
