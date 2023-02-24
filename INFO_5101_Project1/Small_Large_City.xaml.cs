@@ -20,6 +20,7 @@ namespace INFO_5101_Project1
     public partial class Small_Large_City : Window
     {
         public List<string> ProvList = BackEnd.Statistics.ListProvinces();
+        public List<string> cities = new List<string>();
         public Small_Large_City()
         {
             InitializeComponent();
@@ -35,6 +36,16 @@ namespace INFO_5101_Project1
                     };
                     ProvinceCombo.Items.Add(item);
                 }
+        }
+
+        private void SearchInfo_CitySize_Loaded(object sender, RoutedEventArgs e)
+        {
+            string prov = ProvinceCombo.Text;
+            //string temp = BackEnd.Statistics.DisplayLargestPopulationCity(prov);
+            //LargestCity.Text = temp;
+
+            //string temp1 = BackEnd.Statistics.DisplayLargestPopulationCity(prov);
+            //SmallestCity.Text = "Same Cities Entered";
         }
     }
 }
