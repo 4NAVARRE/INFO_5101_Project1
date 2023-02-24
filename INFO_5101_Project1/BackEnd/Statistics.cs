@@ -205,6 +205,7 @@ namespace INFO_5101_Project1.BackEnd
             {
                 list.Add(tmp.province);
             }
+            list = list.Distinct().ToList();
             return list;
         }
         //Rank provinces by population
