@@ -1,4 +1,13 @@
-﻿using System;
+﻿/**
+ * FileName: Statistics.cs
+ * Purpose: The purpose of the file is to connect statistics.cs to UI implementation.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

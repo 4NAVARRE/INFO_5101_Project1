@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * FileName: City_Distance_Compare.cs
+ * Purpose: the purpose of the file is to connect statistics.cs to UI implementation for comparing 2 cities distance.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +33,7 @@ namespace INFO_5101_Project1
             InitializeComponent();
         }
 
+        // loaded info in comboBox for cities
         private void City1_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (string city in CityList)
@@ -38,6 +46,7 @@ namespace INFO_5101_Project1
             }
         }
 
+        //loaded info in ComboBox for cities
         private void City2_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (string city in CityList)
@@ -50,6 +59,7 @@ namespace INFO_5101_Project1
             }
         }
 
+        //Button click event for the calculation
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
             string[] split;

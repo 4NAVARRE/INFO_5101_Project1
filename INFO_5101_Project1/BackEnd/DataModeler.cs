@@ -1,4 +1,11 @@
-﻿using Newtonsoft.Json.Linq;
+﻿/**
+ * FileName: DataModeler.cs
+ * Purpose: It holds the information of parsing data from a particular file.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +22,7 @@ namespace INFO_5101_Project1.BackEnd
         public Dictionary<string, CityInfo> data = new();
         public delegate void ParsingMethod(string fileName);
 
+        //Parse XML and grabs all information from a certain file
         private void ParseXML(string fileName)
         {
             XmlDocument doc = new();
@@ -56,6 +64,7 @@ namespace INFO_5101_Project1.BackEnd
             }
         }
 
+        //Parse JSON and grabs all information from a certain file
         private void ParseJSON(string fileName)
         {
             // Code to parse JSON file
@@ -103,6 +112,7 @@ namespace INFO_5101_Project1.BackEnd
             }
         }
 
+        //Parse CSV and grabs all information from a certain file
         private void ParseCSV(string fileName)
         {
             using StreamReader reader = new(fileName);

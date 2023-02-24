@@ -1,4 +1,11 @@
-﻿using INFO_5101_Project1.BackEnd;
+﻿/**
+ * FileName: CitiesInfo.cs
+ * Purpose: the purpose of the file is to connect statistics.cs to UI implementation for Cities' Info.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using INFO_5101_Project1.BackEnd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +32,7 @@ namespace INFO_5101_Project1
             InitializeComponent();
         }
 
+        //Button click event for getting the info of a city
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CityInfo selectedCity = BackEnd.Statistics.DisplayCityInformation(cityInputTextBox.Text);
@@ -40,6 +48,7 @@ namespace INFO_5101_Project1
             }
         }
 
+        // button click event for map
         private void CitiesInfoLocateButton_Click(object sender, RoutedEventArgs e)
         {
             BackEnd.Statistics.ShowCityOnMap(cityInputTextBox.Text);

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * FileName: Citys.cs
+ * Purpose: the purpose of the file is to connect statistics.cs to UI implementation for comparing 2 cities population and find the largest cities between selected cities.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +32,7 @@ namespace INFO_5101_Project1
             InitializeComponent();
         }
 
+        //button click event to get larger city and populations
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string[] split;
@@ -53,6 +61,7 @@ namespace INFO_5101_Project1
             }
         }
 
+        //loads all cities in first ComboBox
         private void City1_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (string city in CityList)
@@ -65,6 +74,7 @@ namespace INFO_5101_Project1
             }
         }
 
+        //loads all cities in second ComboBox
         private void City2_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (string city in CityList)

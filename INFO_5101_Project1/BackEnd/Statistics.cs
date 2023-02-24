@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * FileName: Statistics.cs
+ * Purpose: It holds all of the functional methods for all of the UI.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,19 +18,22 @@ namespace INFO_5101_Project1.BackEnd
 {
     public class Statistics
     {
+        // Dictionary to store CityCatalogue
         public static Dictionary<string, CityInfo> CityCatalogue { get; set; }
 
+        //Constructors
         public Statistics(string fileName, string fileType)
         {
             DataModeler modeler = new();
             CityCatalogue = modeler.ParseFile(fileName, fileType);
         }
-
+        
         public Statistics()
         {
             CityCatalogue = new Dictionary<string, CityInfo>();
         }
 
+        //Displays City Information
         public static CityInfo? DisplayCityInformation(string Name)
         {
             Name = CheckSame(Name);
@@ -40,6 +50,7 @@ namespace INFO_5101_Project1.BackEnd
 
         }
 
+        //Display the largest city depending on the population
         public static string? DisplayLargestPopulationCity(string province)
         {
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
@@ -64,6 +75,7 @@ namespace INFO_5101_Project1.BackEnd
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
+        //Display the smallest city depending on the population
         public static string DisplaySmallestPopulationCity(string province)
         {
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
@@ -86,6 +98,8 @@ namespace INFO_5101_Project1.BackEnd
             return "";
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
+
+        //Compare two Cities population
         public static string CompareCitiesPopulation(string city1, string city2)
         {
             CityInfo? tmp1 = null;
@@ -123,6 +137,7 @@ namespace INFO_5101_Project1.BackEnd
             }
         }
 
+        //show the map
         public static void ShowCityOnMap(string cityName)
         {
             bool test=false;
@@ -148,6 +163,8 @@ namespace INFO_5101_Project1.BackEnd
             }
             
         }
+
+        //Displays provinces total population
         public static int DisplayProvincePopulation(string province)
         {
             int totalPop = 0;
@@ -160,6 +177,8 @@ namespace INFO_5101_Project1.BackEnd
             }
             return totalPop;
         }
+
+        //Displays all cities in a province
         public static List<string> DisplayProvinceCities(string province)
         {
             List<string> list = new();
@@ -172,6 +191,8 @@ namespace INFO_5101_Project1.BackEnd
             }
             return list;
         }
+
+        //List of Cities
         public static List<string> ListCities()
         {
             List<string> list = new();
@@ -181,6 +202,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             return list;
         }
+        //Lists of Provinces
         public static List<string> ListProvinces()
         {
             List<string> list = new();
@@ -190,6 +212,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             return list;
         }
+        //Rank provinces by population
         public static string[] RankProvincesByPopulation()
         {
             int count = 0;
@@ -234,6 +257,7 @@ namespace INFO_5101_Project1.BackEnd
             return sortedProvinces;
         }
 
+        //Rank provinces by cities
         public static string[] RankProvincesByCities()
         {
             int count = 0;
@@ -279,6 +303,7 @@ namespace INFO_5101_Project1.BackEnd
             return sortedProvinces;
         }
 
+        //Checks if any duplication exists
         public static string CheckSame(string cityName)
         {
             cityName += "1";
@@ -312,6 +337,8 @@ namespace INFO_5101_Project1.BackEnd
                 return cityName.Substring(0, cityName.Length - 1);
             }
         }
+
+        //Display Capital of a province
         public static (string, double, double) GetCapital(string prov)
         {
             foreach (var tmp in CityCatalogue.Values)
@@ -326,6 +353,7 @@ namespace INFO_5101_Project1.BackEnd
             }
             return ("", 0, 0);
         }
+        //Calculates the distance between cities
         public static double CalculateDistanceBetweenCities(string city1, string city2)
         {
             if (!CityCatalogue.ContainsKey(city1) || !CityCatalogue.ContainsKey(city2))
@@ -355,6 +383,7 @@ namespace INFO_5101_Project1.BackEnd
             return distance / 1000; // Return distance in kilometers
         }
     }
+    //neccessary class
     public class ProvincePopulation
     {
         public string Province { get; set; }

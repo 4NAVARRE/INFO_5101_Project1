@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * FileName: MainWindow.cs
+ * Purpose: The purpose of the file is to connect statistics.cs to UI implementation.
+ * Author: Kieran Primeau, Stanislav Kovalenko, Agnita Paul, Bhavin Patel
+ * Creation Date: 20 February, 2023
+ * 
+ **/
+using System;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
