@@ -55,8 +55,12 @@ namespace INFO_5101_Project1.BackEnd
                     tmp = city;
                 }
             }
+            if(tmp != null)
+            {
+                return tmp.cityName;
+            }
+            return "";
 
-            return tmp.cityName;
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
@@ -75,7 +79,11 @@ namespace INFO_5101_Project1.BackEnd
                     tmp = city;
                 }
             }
-            return tmp.cityName;
+            if (tmp != null)
+            {
+                return tmp.cityName;
+            }
+            return "";
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
         public static string CompareCitiesPopulation(string city1, string city2)
@@ -117,20 +125,28 @@ namespace INFO_5101_Project1.BackEnd
 
         public static void ShowCityOnMap(string cityName)
         {
+            bool test=false;
+
             cityName = CheckSame(cityName);
             if (cityName == "")
                 return;
 
+            foreach (var city in CityCatalogue.Values)
+            {
+                if(cityName.Equals(city.cityName))
+                {
+                    test = true;
+                }
+            }
+
             CityCatalogue.TryGetValue(cityName, out var tmp);
-            try
+            
+            if(test)
             {
                 string url = $"https://www.google.com/maps/place/{tmp.latitude},{tmp.longitude}";
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
             }
-            catch
-            {
-
-            }
+            
         }
         public static int DisplayProvincePopulation(string province)
         {
