@@ -27,11 +27,6 @@ namespace INFO_5101_Project1.BackEnd
             DataModeler modeler = new();
             CityCatalogue = modeler.ParseFile(fileName, fileType);
         }
-        
-        public Statistics()
-        {
-            CityCatalogue = new Dictionary<string, CityInfo>();
-        }
 
         //Displays City Information
         public static CityInfo? DisplayCityInformation(string Name)
@@ -383,7 +378,7 @@ namespace INFO_5101_Project1.BackEnd
             return distance / 1000; // Return distance in kilometers
         }
     }
-    //neccessary class
+    //used for list creation
     public class ProvincePopulation
     {
         public string Province { get; set; }
