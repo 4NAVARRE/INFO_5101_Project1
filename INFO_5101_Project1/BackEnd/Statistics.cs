@@ -330,7 +330,11 @@ namespace INFO_5101_Project1.BackEnd
         {
             if (!CityCatalogue.ContainsKey(city1) || !CityCatalogue.ContainsKey(city2))
             {
-                throw new ArgumentException("One or both of the cities do not exist in the CityCatalogue dictionary.");
+                return 0;
+            }
+            else if(city1=="" | city2=="")
+            {
+                return 0;
             }
             CityInfo city1Info = CityCatalogue[city1];
             CityInfo city2Info = CityCatalogue[city2];

@@ -57,11 +57,11 @@ namespace INFO_5101_Project1
             split = City1.Text.Split(",");
             split2 = City2.Text.Split(",");
             double temp = BackEnd.Statistics.CalculateDistanceBetweenCities(split[0], split2[0]);
-            if (City1.Text == City2.Text)
+            if (City1.Text == City2.Text && City1.Text != "Cities")
             {
                 DistanceText.Text = "Same Cities Entered";
             }
-            else
+            else if(temp != null && temp !=0)
             {
                 DistanceText.Text = temp.ToString("#.##") + " KM";
 
